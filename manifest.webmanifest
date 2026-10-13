@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Papua Field Notes — Atlas 58 Distrik",
+  "name": "Papua Field Notes — Atlas dan Perbandingan Kabupaten",
   "short_name": "Papua Notes",
-  "description": "Panduan 58 distrik Mimika, Nabire, Asmat",
+  "description": "Atlas 58 distrik dan analisis perbandingan 2–3 kabupaten Mimika, Nabire, Asmat",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -1,10 +1,23 @@
-# Papua Field Notes v5 — GitHub Pages
+# Papua Field Notes v6 — Modern Comparison Edition
 
-UI publik: Beranda, Wilayah, Budaya, Jelajah. Pilihan wilayah sticky dan transisi halus. Panduan/checklist dan Tambah Informasi dihapus dari aplikasi; perbarui konten dari repository GitHub. Profil 58 distrik dipertahankan.
+PWA untuk GitHub Pages: **5 menu** (Beranda, Wilayah, Banding, Budaya, Jelajah). Bagian **Banding** menyediakan pilihan 2–3 kabupaten, 7 indikator kuantitatif, 18 aspek kualitatif, filter kelompok, tampilan ringkas/detail, interpretasi, dan tautan sumber.
 
-## Update website
-1. Di repository elakukua/Papua_Field_Notes, upload atau replace `index.html` dan `sw.js` dari ZIP ini. Hapus `README-PASANG.md` dan `TAMBAH_INFORMASI.md` jika tidak lagi diperlukan, atau biarkan sebagai dokumentasi GitHub (tidak tampil di aplikasi).
-2. Commit ke `main`; tunggu GitHub Pages selesai publish.
-3. Di iPhone, tutup aplikasi dan buka ulang. Bila masih versi lama, reload Safari untuk memperbarui service worker/cache.
+## Memperbarui repository
 
-Untuk unggah awal ke repository kosong, upload seluruh isi paket di root, bukan ZIP-nya.
+1. Ekstrak ZIP ini. Unggah **seluruh isi folder** ke root repository `elakukua/Papua_Field_Notes` (bukan ZIP).
+2. Timpa `index.html`, `sw.js`, `manifest.webmanifest`; **tambahkan `comparison-data.js`** (wajib). Ikon yang sudah ada boleh tetap.
+3. Commit ke branch `main`, cek Actions > pages build and deployment sukses.
+4. Uji `https://elakukua.github.io/Papua_Field_Notes/` di Safari. Bila versi lama muncul, muat ulang halaman agar service worker v6 mengaktifkan cache baru.
+
+## Memperbarui konten dari GitHub
+
+- `comparison-data.js`: tabel 18 aspek, pembahasan dua/tiga wilayah, IPM laki-laki/perempuan 2025, daftar sumber. **Perbarui fakta dengan sumber dan tahun rujukan.**
+- `index.html`: UI, daftar 58 distrik, data dan profil kabupaten.
+- `sw.js`: jika ada perubahan versi besar dan iPhone menyajikan konten lama, naikkan versi cache.
+
+## Catatan metodologis
+
+- Jumlah penduduk tidak memiliki tahun yang sama (Mimika 2026, Nabire 2025, Asmat 2024). Jangan memakai perbedaan angka ini untuk menyimpulkan tren pertumbuhan.
+- IPM menurut jenis kelamin berasal dari tabel resmi BPS tahun 2025 dan **bukan IPM keseluruhan**.
+- Analisis kondisi akses dan layanan adalah sintesis kualitatif, bukan peringkat mutu, survei biaya, atau informasi keamanan real-time.
+- Tidak ada fitur edit data, panduan, maupun formulir tambahan di aplikasi; perbarui konten melalui GitHub saja.
